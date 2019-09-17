@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
-import Head from 'next/head'
+import Head from "next/head";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Banner = styled.div`
   width: 100vw;
@@ -12,7 +12,7 @@ const Banner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const Title = styled.h1`
   font-weight: normal;
@@ -21,7 +21,7 @@ const Title = styled.h1`
   color: rgb(255, 255, 255);
   line-height: 105%;
   white-space: pre-line;
-`
+`;
 
 const Home = () => (
   <div>
@@ -29,9 +29,9 @@ const Home = () => (
       <title>Home</title>
     </Head>
     <Banner>
-      <Title>Next Pwa</Title>
+      <Title>NextJs Offline / Pwa</Title>
     </Banner>
   </div>
-)
+);
 
-export default Home
+export default Home;

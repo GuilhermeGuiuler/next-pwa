@@ -1,23 +1,23 @@
-const withOffline = require('next-offline')
+const withOffline = require("next-offline");
 
 const nextConfig = {
-  target: 'serverless',
-  transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache
+  target: "serverless",
+  transformManifest: manifest => ["/"].concat(manifest), // add the homepage to the cache
   // Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
   // turn on the SW in dev mode so that we can actually test it
   generateInDevMode: true,
-  // registerSwPrefix: 'v0.0.1',
   workboxOpts: {
-    swDest: 'static/service-worker.js',
+    swDest: "static/service-worker.js",
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
-        handler: 'NetworkFirst',
+        handler: "NetworkFirst",
         options: {
-          cacheName: 'NextPwa',
+          cacheName: "NextPWA",
           networkTimeoutSeconds: 15,
           expiration: {
-            maxAgeSeconds: 1000 // 1 month
+            maxEntries: 20,
+            maxAgeSeconds: 60
           },
           cacheableResponse: {
             statuses: [0, 200]
@@ -26,6 +26,6 @@ const nextConfig = {
       }
     ]
   }
-}
+};
 
-module.exports = withOffline(nextConfig)
+module.exports = withOffline(nextConfig);
