@@ -1,0 +1,21 @@
+{
+  "name": "Next Pwa",
+  "short_name": "Next Pwa",
+  "icons": [
+    {
+      "src": "/static/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#FFFFFF",
+  "description": "Teste de pwa nextjs",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#000"
+}
