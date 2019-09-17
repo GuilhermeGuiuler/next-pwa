@@ -29,10 +29,7 @@ const Home = () => (
       <title>Home</title>
     </Head>
     <Banner>
-      <Title>
-        A assinatura para manter sua casa <br />
-        dentro dos seus planos
-      </Title>
+      <Title>Next Pwa</Title>
     </Banner>
   </div>
 )
